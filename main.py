@@ -3,7 +3,7 @@ from datetime import datetime,timezone,timedelta
 
 class TelegramPontoBot:
   def __init__(self):
-    token = '1541293521:AAESNWV-b0pOJPdCTawrBGVUoRvo8Q3elAs'
+    token = "MY_TOKEN"
     self.msgHoraExataEnviada = False
     self.msgNoPrazoEnviada = False
     self.msgPerdidoEnviada = False
@@ -50,17 +50,12 @@ class TelegramPontoBot:
     
   def IniciarPonto(self):
     while True:
-      #self.verificaPonto('-382360320')
-      self.verificaPonto('-128811197')
+      self.verificaPonto('ID_GROUP')
 
 # Iniciando o bot
 bot = TelegramPontoBot()
 
-#Teste
-#grupo = '-382360320';
 #FC
-grupo = '-128811197';
+grupo = 'ID_GROUP'
 bot.responder('E ai negada!', grupo)
-#bot.responder('Eu sou o Zoiudo, o Bot do Grpfor-fc!', grupo)
-#bot.responder('Vou fazer umas coisinhas por aqui!', grupo)
 bot.IniciarPonto()
